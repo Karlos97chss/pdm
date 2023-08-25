@@ -1,34 +1,53 @@
-// variaveis
-let local = 10;
-const imutavel = [10];
-imutavel.push(20);
+// variavel
+const numero = 10
+numero = 20 // erro
+
+const frutas = []
+frutas.push("banana")
+
+const pessoa = { id: 1, nome: "Jose" }
+pessoa.sexo = 'M'
+pessoa['sexo'] = 'M'
+
+pessoa = { id: 2, nome: "Maria"}
+
+let cont = 0
 
 // funcoes
-function soma(a, b) {
-    return a + b;
+const soma = (a, b) => a + b
+
+const getTasks = () => tasks
+
+function getTasks() {
+    return tasks
 }
 
-// arrow function
-const soma2 = (a, b) => a + b;
-console.log(soma(2, 3));
-console.log(soma2(2, 3));
+function App() {
+    return (
+        <View>            
+        </View>
+    );
 
-// arrays
-const frutas = [];
-frutas.push(...["uva", "maca"]);
-frutas.forEach(fruta => console.log(fruta));
-const achou = frutas.find((fruta) => fruta === "banana");
-console.log(achou);
+}
 
-// objects
-const pessoa = {id:1, nome: "Jose", sexo: "M"};
-console.log(pessoa.nome);
-const { nome, sexo } = pessoa;
-console.log(nome, sexo);
+const App = () => <View></View>
+
+// propagacao
+frutas.push(...["uva", "maca"])
+["banana", "uva", "maca"]
+
+// desestruturacao
+const {id, nome} = pessoa
 
 // modulos
-export default frutas;
-export { achou, soma }
+export default pessoa
 
-import frutas from 'revisao'
-import { achou } from 'revisao'
+export {frutas, soma}
+
+
+import pessoa from 'revisao'
+
+import { frutas } from 'revisao'
+
+import { View } from 'react-native'
+
